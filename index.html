@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Matrix Dimension Setup | MatrixOps</title>
+    
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+        <nav class="nav-bar">
+            <div class="brand-logo">MatrixOps</div>
+            <div class="nav-links">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#">About Us</a>
+            </div>
+            <button class="btn-header">Get Started</button>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-container">
+        
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1 class="main-title">Configure Dimensions</h1>
+            <p class="main-subtitle">
+                Define the shape of your operational matrices. Ensure Matrix A's columns match Matrix B's rows for multiplication.
+            </p>
+        </div>
+
+        <!-- Matrix Configuration Grid -->
+        <div class="matrix-grid">
+            
+            <!-- Matrix A Panel -->
+            <div class="matrix-card">
+                <div class="card-header">
+                    <h2 class="card-title">Matrix A</h2>
+                    <span class="badge">Primary Input</span>
+                </div>
+                
+                <div class="stepper-group">
+                    <!-- Rows M Input -->
+                    <div class="stepper-item">
+                        <label class="stepper-label">ROWS (M)</label>
+                        <div class="stepper-control">
+                            <button id="dec-row-a" class="stepper-btn">
+                                <span class="material-symbols-outlined">remove</span>
+                            </button>
+                            <input id="val-row-a" type="number" class="matrix-dim-input" value="3" min="1" max="8">
+                            <button id="inc-row-a" class="stepper-btn">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Columns N Input -->
+                    <div class="stepper-item">
+                        <label class="stepper-label">COLUMNS (N)</label>
+                        <div class="stepper-control">
+                            <button id="dec-col-a" class="stepper-btn">
+                                <span class="material-symbols-outlined">remove</span>
+                            </button>
+                            <input id="val-col-a" type="number" class="matrix-dim-input" value="3" min="1" max="8">
+                            <button id="inc-col-a" class="stepper-btn">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matrix Grid Dot Canvas -->
+                <div class="matrix-canvas-wrapper">
+                    <div id="grid-preview-a" class="grid-preview"></div>
+                </div>
+            </div>
+
+            <!-- Matrix B Panel -->
+            <div class="matrix-card">
+                <div class="card-header">
+                    <h2 class="card-title">Matrix B</h2>
+                    <span class="badge">Secondary Input</span>
+                </div>
+                
+                <div class="stepper-group">
+                    <!-- Rows N Input -->
+                    <div class="stepper-item">
+                        <label class="stepper-label">ROWS (N)</label>
+                        <div class="stepper-control">
+                            <button id="dec-row-b" class="stepper-btn">
+                                <span class="material-symbols-outlined">remove</span>
+                            </button>
+                            <input id="val-row-b" type="number" class="matrix-dim-input" value="3" min="1" max="8">
+                            <button id="inc-row-b" class="stepper-btn">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Columns P Input -->
+                    <div class="stepper-item">
+                        <label class="stepper-label">COLUMNS (P)</label>
+                        <div class="stepper-control">
+                            <button id="dec-col-b" class="stepper-btn">
+                                <span class="material-symbols-outlined">remove</span>
+                            </button>
+                            <input id="val-col-b" type="number" class="matrix-dim-input" value="3" min="1" max="8">
+                            <button id="inc-col-b" class="stepper-btn">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matrix Grid Dot Canvas -->
+                <div class="matrix-canvas-wrapper">
+                    <div id="grid-preview-b" class="grid-preview"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Action Layout Footer -->
+        <div class="footer-actions">
+            <div class="status-badge">
+                <span class="material-symbols-outlined" style="font-size: 18px;">info</span>
+                <span id="setup-status">Current Setup: 3×3 and 3×3</span>
+            </div>
+            
+            <div class="button-group">
+                <button id="btn-initialize" class="action-btn btn-primary" target="operation.html">
+                    Initialize Matrices <span class="material-symbols-outlined"></span>
+                </button>
+                <button id="btn-reset" class="action-btn btn-secondary">
+                    <span class="material-symbols-outlined">refresh</span> Reset
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Calculation Studio | MatrixOps</title>
+    
+    <!-- Google Fonts & Material Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <link rel="stylesheet" href="operation.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+        <nav class="nav-bar">
+            <div class="brand-logo">MatrixOps</div>
+            <div class="nav-links">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="#">About Us</a>
+            </div>
+            <button class="btn-header">Get Started</button>
+        </nav>
+    </header>
+
+    <!-- Main Studio Container -->
+    <main class="main-container">
+        
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1 class="studio-title">Calculation Studio</h1>
+            <p class="studio-subtitle">
+                Execute complex dimension-based operations with professional-grade precision. Fill your matrices below to begin your computation.
+            </p>
+        </div>
+
+        <!-- Matrix Input Generation Section -->
+        <div class="matrix-work-grid">
+            
+            <!-- Matrix A Input Box -->
+            <div class="matrix-card">
+                <div class="card-header">
+                    <h2 class="card-title">Matrix A</h2>
+                    <span id="dim-tag-a" class="badge">3 × 3</span>
+                </div>
+                <p class="input-instruction">Enter row elements separated by commas (e.g., 1, 2.5, 3)</p>
+                <div id="container-matrix-a" class="row-inputs-container">
+                    <!-- Dynamically generated row text inputs go here -->
+                </div>
+            </div>
+
+            <!-- Matrix B Input Box -->
+            <div class="matrix-card">
+                <div class="card-header">
+                    <h2 class="card-title">Matrix B</h2>
+                    <span id="dim-tag-b" class="badge">3 × 3</span>
+                </div>
+                <p class="input-instruction">Enter row elements separated by commas (e.g., 5, 0, -4.2)</p>
+                <div id="container-matrix-b" class="row-inputs-container">
+                    <!-- Dynamically generated row text inputs go here -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Interactive Operations Toolbar -->
+        <div class="operations-panel">
+            <div class="ops-button-grid">
+                <button class="op-card" data-operation="addition">
+                    <span class="op-icon">+</span>
+                    <span class="op-name">Addition</span>
+                </button>
+                <button class="op-card" data-operation="subtraction">
+                    <span class="op-icon">−</span>
+                    <span class="op-name">Subtraction</span>
+                </button>
+                <button class="op-card" data-operation="multiplication">
+                    <span class="op-icon">×</span>
+                    <span class="op-name">Multiply</span>
+                </button>
+                <button class="op-card" data-operation="transpose">
+                    <span class="material-symbols-outlined op-icon-sym">Aᵀ</span>
+                    <span class="op-name">Transpose</span>
+                </button>
+                <button class="op-card" data-operation="determinant">
+                    <span class="op-icon">Σ</span>
+                    <span class="op-name">Determinant</span>
+                </button>
+            </div>
+
+            <div class="control-footer">
+                <button id="btn-clear-values" class="btn-reset">
+                    <span class="material-symbols-outlined">refresh</span> Reset Values
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Display Box -->
+        <div id="result-display-section" class="result-box hidden">
+            <h2 class="result-title">Computation Result</h2>
+            <div id="result-content" class="result-matrix-output">
+                <!-- Calculated response grid dynamically formatted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Copyright -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <span class="footer-brand">MatrixOps</span>
+            <div class="footer-meta">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">API Docs</a>
+            </div>
+        </div>
+        <p class="copyright-text">© 2026 Matrix Operations. Humanized Professionalism.</p>
+    </footer>
+
+    <script src="operation.js"></script>
+</body>
+</html>
